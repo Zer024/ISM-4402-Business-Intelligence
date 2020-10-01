@@ -10,8 +10,9 @@ grades = [76,-2,77,78,101]
 GradeList = zip(names,grades)
 df = pd.DataFrame(data = GradeList,
                   columns=['Names', 'Grades'])
-df.loc[df['Grades'] <= 100]
-df.loc[(df['Grades'] >= 100,'Grades')] = 100
+df
+df.loc[df['Grades'] < 0,'Grades'] = 0
+df.head()
 
 
 # In[ ]:
