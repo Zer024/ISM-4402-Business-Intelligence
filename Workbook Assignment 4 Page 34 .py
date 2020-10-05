@@ -22,19 +22,27 @@ df.head()
 
 bins = [0, 60, 70, 80, 90, 100]
 group_names = ['F', 'D', 'C', 'B', 'A']
-df['lettergrade'] = pd.cut(df['grade'], bins,
+df['letterGrades'] = pd.cut(df['grade'], bins,
                            labels=group_names)
-df
+df.head()
 
 
 # In[18]:
 
+bins = [0, 80, 100]
+group_names = ['B','A']
+group_names = ['Fail', 'Pass']
 
-df('IsFailing') = np.where((df['grade']<70)& df['gender'] == 'yes', 'no')
-df.tail(10)
 
 
 # In[ ]:
+
+df[''] = pd.cut(df['grade'],bins,
+                labels=group_names)
+df
+
+
+                      
 
 
 
