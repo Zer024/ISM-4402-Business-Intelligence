@@ -108,7 +108,16 @@ pd.pivot_table(df,
 
 
 # In[ ]:
+import matplotlib.pyplot as plt
+import pandas as pd
 
+Location = "downloads/axisdata.csv"
+df = pd.read_csv(Location)
+grouped_data = df.groupby('SalesTraining')
+
+mydf = pd.DataFrame(grouped_data.mean(), columns=['Cars Sold'])
+%matplotlib inline
+mydf.plot(kind='bar', title="Average number of cars sold with Sales Training")
 
 
 
