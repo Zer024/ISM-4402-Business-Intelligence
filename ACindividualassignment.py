@@ -141,7 +141,7 @@ grouped_data = df2.groupby(['Cars Sold'])
 
 mydf = pd.DataFrame(grouped_data.mean(), columns=['Cars Sold', 'Hours Worked'])
 get_ipython().run_line_magic('matplotlib', 'inline')
-mydf.plot(kind='bar', stacked=True, title="Average number of cars sold with Sales Training, by hours worked")
+mydf.plot(kind='bar', stacked=True, title="Average number of cars sold with Sales Training by hours worked")
 
 
 # In[ ]:
